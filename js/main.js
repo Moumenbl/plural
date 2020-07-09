@@ -7,7 +7,7 @@ var cObj;
 var fObj;
 
 // GET THE CONDITIONS
-weatherConditions.open('GET', 'https://samples.openweathermap.org/data/2.5/weather?zip=84653,us&appid=439d4b804bc8187953eb36d2a8c26a02', true);
+weatherConditions.open('GET', 'https://cors-anywhere.herokuapp.com/http://samples.openweathermap.org/data/2.5/weather?zip=84653,us&appid=439d4b804bc8187953eb36d2a8c26a02', true);
 weatherConditions.responseType = 'text';
 weatherConditions.send(null);
 
