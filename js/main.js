@@ -38,7 +38,7 @@ weatherConditions.onload = function() {
 
 
 // GET THE FORECARST
-weatherForecast.open('GET', 'https://samples.openweathermap.org/data/2.5/forecast?zip=84653,us&appid=439d4b804bc8187953eb36d2a8c26a02', true);
+weatherForecast.open('GET', 'https://cors-anywhere.herokuapp.com/http://samples.openweathermap.org/data/2.5/forecast?zip=84653,us&appid=439d4b804bc8187953eb36d2a8c26a02', true);
 weatherForecast.responseType = 'text'; 
 weatherForecast.send();
 
@@ -52,7 +52,7 @@ weatherForecast.onload = function() {
 		document.getElementById('r1c1').innerHTML=  date_raw;
 
 		var iconcode = fObj.list[0].weather[0].icon;
-		var icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
+		var icon_path = "https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/w/" + iconcode + ".png";
 		document.getElementById('r1c2').src = icon_path;		
 		document.getElementById('r1c3').innerHTML = fObj.list[0].main.temp_min+"&deg";
 		document.getElementById('r1c4').innerHTML = fObj.list[0].main.temp_max+"&deg";
@@ -62,7 +62,7 @@ weatherForecast.onload = function() {
 		document.getElementById('r2c1').innerHTML=  date_raw;
 
 		var iconcode = fObj.list[8].weather[0].icon;
-		var icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
+		var icon_path = "https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/w/" + iconcode + ".png";
 		document.getElementById('r2c2').src = icon_path;		
 		document.getElementById('r2c3').innerHTML = fObj.list[8].main.temp_min+"&deg";
 		document.getElementById('r2c4').innerHTML = fObj.list[8].main.temp_max+"&deg";
@@ -72,7 +72,7 @@ weatherForecast.onload = function() {
 		document.getElementById('r3c1').innerHTML=  date_raw;
 
 		var iconcode = fObj.list[16].weather[0].icon;
-		var icon_path = "https://openweathermap.org/img/w/" + iconcode + ".png";
+		var icon_path = "https://cors-anywhere.herokuapp.com/http://openweathermap.org/img/w/" + iconcode + ".png";
 		document.getElementById('r3c2').src = icon_path;		
 		document.getElementById('r3c3').innerHTML = fObj.list[16].main.temp_min+"&deg";
 		document.getElementById('r3c4').innerHTML = fObj.list[16].main.temp_max+"&deg";
